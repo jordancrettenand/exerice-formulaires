@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"iqNlW":[function(require,module,exports) {
+})({"46McK":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -226,11 +226,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== "undefined") {
     var hostname = getHostname();
     var port = getPort();
-    var protocol = HMR_SECURE || location.protocol == "https:" && ![
-        "localhost",
-        "127.0.0.1",
-        "0.0.0.0"
-    ].includes(hostname) ? "wss" : "ws";
+    var protocol = HMR_SECURE || location.protocol == "https:" && !/localhost|127.0.0.1|0.0.0.0/.test(hostname) ? "wss" : "ws";
     var ws;
     try {
         ws = new WebSocket(protocol + "://" + hostname + (port ? ":" + port : "") + "/");
@@ -579,7 +575,27 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"1SICI":[function(require,module,exports) {
+// variable contenant le formulaire
+var form = document.querySelector("login");
+// fonction pour récupérer les valeurs du formulaire
+function getFormValues(event) {
+    // on empêche l'envoi du formulaire, pour ne pas rafraichir la page
+    event.preventDefault();
+    // on récupère les données du formulaire
+    var data = new FormData(form);
+    // on créé une variable text vide
+    var text = "";
+    // on fait une boucle avec chaque champ du formulaire
+    data.forEach((value, name)=>{
+        // pour chaque champ du formulaire, on ajoute le nom et la valeur (\n = retour à la ligne)
+        text += name + ": " + value + "\n";
+    });
+    // on fait une alerte avec le texte
+    alert(text);
+}
+// lorsqu'on envoie le formulaire, on appelle la fonction getFormValues
+form.addEventListener("submit", getFormValues);
 
-},{}]},["iqNlW","1SICI"], "1SICI", "parcelRequire94c2")
+},{}]},["46McK","1SICI"], "1SICI", "parcelRequire0300")
 
 //# sourceMappingURL=index.18dbc454.js.map
