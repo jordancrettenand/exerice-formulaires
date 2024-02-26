@@ -91,3 +91,58 @@ form {
   margin-left: 500px;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+// ____________________________-
+
+.textfield {
+  position: relative;
+}
+
+.textfield label {
+  position: absolute;
+  top: 1px;
+  left: 10px;
+}
+
+input:focus + label {
+  transform: translateY(-7px) scale(0.7);
+}
+
+.textfield label {
+  position: absolute;
+  top: 1px;
+  left: 10px;
+  pointer-events: none; /* on empêche le click sur le label, pour ne pas empêcher la sélection de l'input */
+  background: white; /* on ajoute une couleur de fond, pour cacher la bordure de l'input */
+  transition: transform 0.3s; /* on ajoute une transition */
+  transform-origin: left; /* on commence la transformation à gauche, pour que le label reste bien à gauche */
+}
+
+// ____________________________-
+// form 2
+
+/* l'élément allongé, qui contient le rond se déplace */
+.switch-wrapper {
+  display: inline-block; /* pour que le div soit à côté du texte */
+  width: 30px;
+  height: 20px;
+  padding: 2px;
+  border-radius: 10px;
+  background: orange;
+}
+
+/* le rond qui se déplace */
+.switch-inner {
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  background: red;
+}
+
+input:checked + .switch-wrapper .switch-inner {
+  margin-left: 10px;
+}
+
+.switch input {
+  display: none;
+}

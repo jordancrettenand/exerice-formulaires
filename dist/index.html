@@ -8,7 +8,7 @@
   </head>
   <body>
 
-<form>
+<form class="1">
 
 <label for="prénom"></label>
 <input type="text" id="jsp" name="prénom" placeholder="Prénom"> 
@@ -65,6 +65,84 @@
 <button type="submit">Envoyer
   
 </button></form>
+
+<form class="2">
+
+  <div class="textfield">
+    <input type="text" id="jsp" name="nom">
+    <label>Label</label>
+  </div>
+  
+  <br>
+
+  <div class="textfield">
+    <input type="text" id="jsp" name="nom">
+    <label>Label</label>
+  </div>
+
+  <br>
+  <br>
+  
+  <label>
+    <input type="radio" name="gender" value="Homme">
+    Français
+  </label>
+  <label>
+    <input type="radio" name="gender" value="Femme">
+    Allemand
+  </label>
+  <label>
+    <input type="radio" name="gender" value="C'est égal">
+    Italien
+  </label>
+  
+  <br>
+  
+  <label>
+    <input type="checkbox" name="conditions">
+    S’abonner à la newsletter
+  </label>
+  <label>
+    <input type="checkbox" name="conditions">
+    J’accepte les conditions générales
+  </label>
+  
+  <br>
+  
+  <label for="pays">Pays</label>
+  <select id="pays" name="pays">
+    <option value="CH">Suisse</option>
+    <option value="FR">France</option>
+    <option value="DE">Allemagne</option>
+    <option value="IT">Italie</option>
+  </select>
+  
+  <br>
+  <br>
+  
+  <label for="message"></label>
+  <textarea id="message" name="message" placeholder="Message"></textarea>
+  
+  <br>
+  <br>
+
+  <label class="switch">
+    <input type="checkbox">
+    <div class="switch-wrapper">
+      <div class="switch-inner"></div>
+    </div>
+    S'inscrire à la newsletter
+  </label>
+  
+  <br>
+  
+  <button type="submit">Envoyer
+
+</button></form>
+
+
+
+
 
 
     <script src="/js/index.18dbc454.js" defer=""></script>

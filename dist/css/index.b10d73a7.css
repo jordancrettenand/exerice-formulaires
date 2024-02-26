@@ -70,4 +70,52 @@ form {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.textfield {
+  position: relative;
+}
+
+.textfield label {
+  position: absolute;
+  top: 1px;
+  left: 10px;
+}
+
+input:focus + label {
+  transform: translateY(-7px)scale(.7);
+}
+
+.textfield label {
+  pointer-events: none;
+  transform-origin: 0;
+  background: #fff;
+  transition: transform .3s;
+  position: absolute;
+  top: 1px;
+  left: 10px;
+}
+
+.switch-wrapper {
+  background: orange;
+  border-radius: 10px;
+  width: 30px;
+  height: 20px;
+  padding: 2px;
+  display: inline-block;
+}
+
+.switch-inner {
+  background: red;
+  border-radius: 8px;
+  width: 16px;
+  height: 16px;
+}
+
+input:checked + .switch-wrapper .switch-inner {
+  margin-left: 10px;
+}
+
+.switch input {
+  display: none;
+}
+
 /*# sourceMappingURL=index.b10d73a7.css.map */
